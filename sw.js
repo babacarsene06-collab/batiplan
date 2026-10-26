@@ -1,6 +1,6 @@
 // BatiPlan — service worker (mode hors ligne).
 // Pour publier une mise à jour : changer le numéro de VERSION ci-dessous.
-const VERSION = 'batiplan-v1.8.1';
+const VERSION = 'batiplan-v2.1.0';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
 
 self.addEventListener('install', e => {
