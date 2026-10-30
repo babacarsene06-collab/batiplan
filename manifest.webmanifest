@@ -1,17 +1,19 @@
 {
-  "id": "./",
   "name": "BatiPlan — Générateur de devis",
   "short_name": "BatiPlan",
-  "description": "Générateur de devis BatiPlan, utilisable hors ligne.",
-  "lang": "fr",
+  "description": "Devis d'architecture et plans 2D/3D — Sénégal",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f3f6f8",
   "theme_color": "#16324f",
+  "lang": "fr",
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='24' fill='%2316324f'/%3E%3Ctext x='64' y='78' text-anchor='middle' font-size='56' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff'%3EBP%3C/text%3E%3C/svg%3E",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
   ]
 }
