@@ -1,28 +1,36 @@
-// BatiPlan — service worker (mode hors ligne).
-// Pour publier une mise à jour : changer le numéro de VERSION ci-dessous.
-const VERSION = 'batiplan-v2.4.0';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
+/* BatiPlan — service worker minimal (cache de l'app pour usage hors ligne) */
+const CACHE = 'batiplan-v1';
+const ASSETS = ['./', './index.html', './manifest.webmanifest'];
 
-self.addEventListener('install', e => {
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
-});
-
-self.addEventListener('activate', e => {
-  e.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== VERSION).map(k => caches.delete(k))))
-      .then(() => self.clients.claim())
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting())
   );
 });
 
-self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET') return;
-  e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then(hit => {
-      if (hit) return hit;
-      return fetch(e.request).catch(() =>
-        e.request.mode === 'navigate' ? caches.match('./index.html') : Response.error()
-      );
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
+    ).then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+  event.respondWith(
+    caches.match(req).then((cached) => {
+      const fetched = fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          if (res.ok && new URL(req.url).origin === self.location.origin) {
+            caches.open(CACHE).then((cache) => cache.put(req, copy));
+          }
+          return res;
+        })
+        .catch(() => cached);
+      return cached || fetched;
     })
   );
 });
