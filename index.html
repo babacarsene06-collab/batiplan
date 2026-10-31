@@ -35,12 +35,13 @@ textarea{min-height:82px;resize:vertical}input:focus,select:focus,textarea:focus
 @media(max-width:480px){.grid,.grid.three{grid-template-columns:1fr 1fr}.service-head,.service-row{grid-template-columns:minmax(80px,1fr) 36px 52px 68px 68px 24px}.service-row input,.service-row select.unit{padding:8px 5px;font-size:12px}.quote-paper{padding:13px}.quote-top h2{font-size:20px}}
 @media print{
  @page{size:A4;margin:14mm}
- body{background:#fff;font-size:11pt}header,.editor,.footnote,.no-print,dialog,.drawer,.scrim,.fab{display:none!important}main{display:block;margin:0;padding:0;max-width:none}.preview{position:static}.preview.panel{border:0;box-shadow:none;padding:0;margin:0}.quote-paper{border:0;padding:0}.quote-top h2{font-size:23pt}.preview table{font-size:9pt}.preview th,.preview td{padding:7px 5px}.smallprint{font-size:8pt}.quote-meta{font-size:9pt}
+ body{background:#fff;font-size:11pt;line-height:1.4}header,.editor,.footnote,.no-print,dialog,.drawer,.scrim,.fab{display:none!important}main{display:block;margin:0;padding:0;max-width:none}.preview{position:static}.preview.panel{border:0;box-shadow:none;padding:0;margin:0}.quote-paper{border:0;padding:0;font-size:11pt}.quote-top h2{font-size:18pt}.preview table{font-size:10pt}.preview th,.preview td{padding:6px 5px}.smallprint{font-size:9pt}.quote-meta{font-size:10pt}.totals{font-size:11pt}.deposit{font-size:10pt}.words{font-size:10pt}
 }
-.logo{height:78px;width:auto;display:block;margin:0 0 6px}.words{font-size:12px;margin:12px 0 0;font-style:italic}.qrow{flex-wrap:wrap}.qrow>div:last-child{display:flex;gap:6px;flex-wrap:wrap}details.tariff-box summary{cursor:pointer;font-weight:700;color:var(--navy)}details.tariff-box .grid{margin-top:12px}
+.logo{height:80px;width:auto;max-width:240px;object-fit:contain;display:block;margin:0 0 6px}.words{font-size:12px;margin:12px 0 0;font-style:italic}.qrow{flex-wrap:wrap}.qrow>div:last-child{display:flex;gap:6px;flex-wrap:wrap}details.tariff-box summary{cursor:pointer;font-weight:700;color:var(--navy)}details.tariff-box .grid{margin-top:12px}
 .hl{display:flex;align-items:center;gap:12px}.menu-icon{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:22px;line-height:1;padding:8px 13px;border-radius:10px}.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:900}.scrim[hidden]{display:none}.drawer{position:fixed;top:0;left:0;bottom:0;width:min(300px,82vw);background:#fff;z-index:1000;transform:translateX(-105%);transition:transform .22s ease;display:flex;flex-direction:column;box-shadow:6px 0 30px rgba(0,0,0,.3);overflow-y:auto;padding:max(14px,env(safe-area-inset-top)) 10px 14px}.drawer.open{transform:none}.drawer-logo{height:64px;width:auto;margin:6px 8px 10px;align-self:flex-start}.drawer button{background:none;border:0;color:var(--navy);text-align:left;padding:15px 14px;font-size:16px;border-radius:10px}.drawer button:active{background:#eef3f7}.drawer hr{border:0;border-top:1px solid var(--line);margin:8px 0;width:100%}dialog#tarifDialog{max-width:min(560px,94vw);width:100%;max-height:88vh;overflow:auto;border:0;border-radius:14px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}dialog#tarifDialog::backdrop{background:rgba(0,0,0,.45)}
 .drawer .sub{padding:10px 14px 10px 22px;font-size:14px;border-left:3px solid var(--line);margin-left:12px;border-radius:0 10px 10px 0}.drawer .sub small{color:var(--muted)}.drawer .subinfo{padding:8px 26px;color:var(--muted);font-size:13px}body.dark{color-scheme:dark;--ink:#e6edf3;--muted:#9aabbb;--line:#2a3a4a;--pale:#1d2a37;--green:#5fd09b;background:#0f1720}body.dark header{background:#0a1a2a}body.dark .panel{background:#17212c;box-shadow:none}body.dark .footnote{color:#9aabbb}body.dark label{color:#b4c2d0}body.dark .service-head{color:#93a4b4}body.dark input,body.dark select,body.dark textarea{background:#0f1a24;border-color:#33475a;color:var(--ink)}body.dark input:focus,body.dark select:focus,body.dark textarea:focus{outline-color:#2f6f9f;border-color:#5aa0d0}body.dark .editor h2,body.dark .preview>h2{color:#cfe3f5}body.dark .editor h3,body.dark .preview>h3{color:#8fc0e8}body.dark button.secondary{background:#1f2d3b;color:#cfe3f5;border-color:#33475a}body.dark button.danger{background:#3a2123;color:#ff9b94}body.dark .addline{background:#1f3447;color:#cfe3f5}body.dark .tariff-box{background:#14202b;border-color:#2c4256}body.dark .tariff-result{background:#101a24}body.dark .tariff-result strong{color:#cfe3f5}body.dark .quote-paper{--ink:#17212b;--muted:#667582;--line:#d8e0e7;--pale:#edf3f7;--green:#237653;background:#fff;color:#17212b}body.dark .drawer,body.dark dialog#tarifDialog{background:#17212c;color:var(--ink)}body.dark .drawer button{color:#cfe3f5}body.dark .drawer button:active{background:#223142}body.dark .drawer-logo{background:#fff;border-radius:8px;padding:4px}@media print{body.dark,body.dark .panel{background:#fff!important}}
 .fab{position:fixed;top:calc(max(10px,env(safe-area-inset-top)) + 46px);left:12px;z-index:800;width:50px;height:50px;border-radius:50%;padding:0;font-size:24px;line-height:1;background:var(--navy);color:#fff;border:2px solid rgba(255,255,255,.9);box-shadow:0 4px 16px rgba(0,0,0,.45)}body.dark .fab{background:#2f6f9f}.fab[hidden]{display:none}
+dialog#demarcheDialog{max-width:min(520px,94vw);width:100%;border:0;border-radius:14px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}dialog#demarcheDialog::backdrop{background:rgba(0,0,0,.45)}body.dark dialog#demarcheDialog{background:#17212c;color:var(--ink)}
 dialog#sigDialog{max-width:min(520px,94vw);width:100%;max-height:88vh;overflow:auto;border:0;border-radius:14px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}dialog#sigDialog::backdrop{background:rgba(0,0,0,.45)}body.dark dialog#sigDialog{background:#17212c;color:var(--ink)}
 .wi{vertical-align:middle;margin-right:8px;flex:none}button.wa,body.dark button.wa{background:#25D366;color:#fff;border:0;display:inline-flex;align-items:center;font-weight:700}.drawer button .wi{color:#25D366}
 .tabbar{position:sticky;top:0;z-index:600;display:flex;gap:4px;align-items:center;overflow-x:auto;background:#fff;border-bottom:1px solid var(--line);padding:6px max(8px,calc((100vw - 1180px)/2));scrollbar-width:none}.tabbar::-webkit-scrollbar{display:none}.tabbar button{flex:none;background:none;color:var(--muted);font-size:14px;padding:10px 13px;border-radius:10px}.tabbar button.on{background:var(--pale);color:var(--navy)}.tabbar #menuBtn2{font-size:21px;color:var(--navy);padding:8px 12px}
@@ -74,6 +75,162 @@ body.dark
 body.dark 
 body.dark 
 details.opts{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:10px}
+
+
+/* —— Interface plus dense (moins étirée) —— */
+header{padding:10px max(14px,calc((100vw - 1180px)/2))!important}
+.brand{font-size:18px!important}
+.brand small{font-size:11px}
+.logo{width:36px;height:36px}
+.tabbar{padding:0 max(8px,calc((100vw - 1180px)/2));gap:2px}
+.tabbar .tab{padding:8px 10px;font-size:13px}
+.tabbar button#menuBtn2{padding:8px 10px}
+main{padding:8px max(12px,calc((100vw - 1180px)/2)) 72px}
+.panel{padding:12px 14px;margin-bottom:10px;border-radius:10px}
+.panel h2{font-size:15px;margin:0 0 8px;font-weight:700}
+.panel h3{font-size:13px;margin:12px 0 6px}
+.panel .hint,.hint{font-size:11.5px;margin:4px 0 8px;line-height:1.35}
+.grid{gap:8px 10px}
+.grid.three{gap:8px 10px}
+.field{gap:3px}
+.field label{font-size:11px;margin:0;letter-spacing:.01em}
+.field input,.field select,.field textarea{padding:7px 9px;font-size:13px;border-radius:8px}
+.field textarea{min-height:64px}
+.actions{gap:6px;margin-top:8px}
+.actions button,button.addline{padding:8px 12px;font-size:13px}
+.tariff-box{padding:10px 12px;margin:8px 0;border-radius:10px}
+.tariff-box h3{margin:0 0 6px}
+.service-head{font-size:10px;padding:0 0 4px;gap:4px}
+.service-row{gap:4px;margin-bottom:4px}
+.service-row input,.service-row select.unit{padding:6px 7px;font-size:12.5px}
+.searchrow{gap:6px;margin:6px 0 8px}
+.qrow{padding:8px 10px;margin-bottom:6px;border-radius:8px}
+.banner{padding:8px 12px;font-size:12.5px}
+#bottomBar{padding:8px max(12px,calc((100vw - 1180px)/2))}
+#bottomBar button{padding:8px 12px;font-size:13px}
+.drawer{padding:14px 12px}
+.drawer button{padding:10px 12px;font-size:13.5px}
+details.opts{padding:8px 10px;margin-top:8px}
+.preview .quote-paper,.quote-paper{padding:16px 18px}
+.quote-top{margin-bottom:10px}
+.quote-top h2{font-size:20px}
+.totals{margin-top:8px}
+.deposit{margin-top:10px;padding:8px 10px}
+.smallprint{margin-top:8px;font-size:10px}
+.editor>.panel[data-tab]+.panel[data-tab]{/* keep */ }
+
+
+/* —— Documents professionnels (devis + démarche) —— */
+#demarchePaper{display:none}
+@media print{
+  @page{size:A4;margin:16mm 16mm 18mm}
+  body{background:#fff!important;color:#17212b;font-size:10.5pt;line-height:1.45;
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif}
+  header,.editor,.footnote,.no-print,dialog,.drawer,.scrim,.fab,.tabbar,.bbar,#bottomBar,#status,.banner{display:none!important}
+  main{display:block;margin:0;padding:0;max-width:none}
+  .preview{position:static!important;display:block!important}
+  .preview.panel{border:0;box-shadow:none;padding:0;margin:0;background:#fff}
+  body.printing-demarche .preview{display:none!important}
+  body.printing-demarche #demarchePaper{display:block!important;visibility:visible!important}
+  body.printing-demarche main,body.printing-demarche .preview{display:none!important}
+  body.printing-receipt .preview{display:none!important}
+  body.printing-receipt #receipt{display:block!important}
+  #demarchePaper{display:none}
+  .quote-paper{
+    border:0;padding:0;background:#fff;color:#17212b;
+    font-size:10.5pt;line-height:1.45;
+  }
+  .quote-paper .logo{
+    height:88px!important;width:auto!important;max-width:260px;
+    object-fit:contain;display:block;margin:0 0 8px;
+  }
+  .quote-top{
+    display:flex;justify-content:space-between;align-items:flex-start;gap:18px;
+    border-bottom:2.5px solid #16324f;padding-bottom:12px;margin-bottom:14px;
+  }
+  .quote-top h2{font-size:16pt;margin:0 0 4px;color:#16324f;font-weight:800;letter-spacing:.02em}
+  .quote-top p{margin:2px 0;color:#53616d;font-size:9pt}
+  .quote-no{text-align:right;font-size:9pt;color:#53616d}
+  .quote-no strong{display:block;color:#16324f;font-size:13pt;letter-spacing:.08em;margin-bottom:4px}
+  .quote-meta{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;
+    margin:0 0 12px;font-size:9.5pt;
+    padding:10px 12px;background:#f4f7fa;border-radius:4px;
+    border:1px solid #e2e8ee;
+  }
+  .quote-meta strong{display:block;font-size:8pt;color:#16324f;letter-spacing:.06em;
+    text-transform:uppercase;margin-bottom:4px;font-weight:700}
+  .quote-meta p{margin:2px 0;color:#17212b}
+  .preview table,.quote-paper table{
+    width:100%;border-collapse:collapse;font-size:9.5pt;
+    margin:8px 0 4px;
+  }
+  .preview thead,.quote-paper thead{display:table-header-group}
+  .preview tfoot,.quote-paper tfoot{display:table-footer-group}
+  .preview tr,.quote-paper tr{page-break-inside:avoid}
+  .preview th{
+    text-align:left;background:#16324f!important;color:#fff!important;
+    padding:7px 8px;font-size:8.5pt;font-weight:700;letter-spacing:.04em;
+    text-transform:uppercase;border:0;
+  }
+  .preview th.num{text-align:right}
+  .preview td{
+    padding:7px 8px;border-bottom:1px solid #e2e8ee;vertical-align:top;color:#17212b;
+  }
+  .preview td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .totals{
+    margin:12px 0 0 auto;max-width:280px;font-size:10pt;
+    page-break-inside:avoid;
+  }
+  .total-line{display:flex;justify-content:space-between;gap:16px;padding:4px 0;color:#17212b}
+  .total-line.final{
+    border-top:2px solid #16324f;margin-top:6px;padding-top:8px;
+    font-size:12pt;font-weight:800;color:#16324f;
+  }
+  .deposit{
+    background:#f0f6f3!important;border:1px solid #c5ddd0;border-radius:4px;
+    padding:10px 12px;margin-top:14px;font-size:9.5pt;color:#17212b;
+    page-break-inside:avoid;
+  }
+  .smallprint{
+    font-size:8.5pt;color:#53616d;margin-top:14px;
+    border-top:1px solid #d8e0e7;padding-top:10px;
+    white-space:pre-wrap;line-height:1.4;
+    page-break-inside:avoid;
+  }
+  .words{font-size:9pt;margin:10px 0 0;font-style:italic;color:#53616d}
+  #pParentNote{page-break-inside:avoid;background:#edf3f7!important;border:1px solid #d0dbe5}
+  #pClientSigBox, #pSig{page-break-inside:avoid}
+  .quote-paper > div[style*="space-between"]{page-break-inside:avoid;margin-top:22px!important}
+  /* numéros de page */
+  body{counter-reset:page}
+  @page{
+    @bottom-center{
+      content:"Page " counter(page) " / " counter(pages);
+      font-size:8pt;color:#667582;
+      font-family:"Segoe UI",system-ui,sans-serif;
+    }
+  }
+  /* Démarche document */
+  .demarche-doc{color:#17212b;font-size:10.5pt;line-height:1.5}
+  .demarche-doc .logo{height:88px;width:auto;max-width:260px;object-fit:contain;margin:0 0 10px}
+  .demarche-doc h1{
+    font-size:15pt;color:#16324f;margin:0 0 6px;font-weight:800;
+    letter-spacing:.04em;border-bottom:2.5px solid #16324f;padding-bottom:10px;
+  }
+  .demarche-doc .dm-sub{font-size:9pt;color:#53616d;margin:0 0 16px}
+  .demarche-doc h2{
+    font-size:11pt;color:#16324f;margin:16px 0 6px;font-weight:700;
+    page-break-after:avoid;
+  }
+  .demarche-doc p{margin:0 0 8px;text-align:justify;orphans:3;widows:3}
+  .demarche-doc ul{margin:4px 0 10px;padding-left:18px}
+  .demarche-doc li{margin-bottom:4px}
+  .demarche-doc .dm-foot{
+    margin-top:20px;padding-top:10px;border-top:1px solid #d8e0e7;
+    font-size:8.5pt;color:#53616d;
+  }
+}
 
 </style>
 </head>
@@ -191,7 +348,6 @@ details.opts{background:var(--card);border:1px solid var(--line);border-radius:1
   </div>
   <div class="panel" data-tab="suivi">
     <h2>Suivi et sauvegarde</h2>
-    <div class="dash" id="dash"></div>
     <p class="hint">Chaque enregistrement ajoute le devis à la liste ci-dessous, sur cet appareil. « Exporter mes données » crée un fichier à garder (WhatsApp, e-mail, Drive) pour tout récupérer sur un nouveau téléphone avec « Importer ».</p>
     <div class="grid"><div class="field"><label for="qstatus">Statut du devis</label><select id="qstatus"><option value="brouillon">brouillon</option><option value="aperçu">aperçu 3D montré</option><option value="envoyé">devis envoyé</option><option value="accepté">devis signé</option><option value="validé">plan validé</option><option value="acompte">acompte reçu</option><option value="livré">plan technique livré</option><option value="soldé">soldé</option><option value="refusé">refusé</option></select></div>
       <div class="field"><label for="useSig">Ma signature</label><select id="useSig"><option value="non">Sans ma signature</option><option value="oui">Avec ma signature</option></select></div>
@@ -216,7 +372,7 @@ details.opts{background:var(--card);border:1px solid var(--line);border-radius:1
       <div class="actions" style="margin-top:8px"><button type="button" class="danger" id="histClearBtn">Effacer l’historique de ce devis</button></div>
     </details>
     <div class="actions" style="margin-top:10px"><button id="saveBtn2">Enregistrer le modèle</button><button class="secondary" id="loadBtn">Charger la sauvegarde</button></div>
-    <div class="actions" style="margin-top:10px"><button class="wa" id="pdfBtn"><svg class="wi" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.2 8.6c0 3.9 2.3 6.2 6.2 6.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Envoyer le PDF par WhatsApp</button><div hidden><button class="secondary" id="fileBtn">Enregistrer sous…</button><button class="secondary" id="exportBtn">Exporter mes données</button><button class="secondary" id="importBtn">Importer</button><input type="file" id="importFile" hidden></div></div>
+    <div class="actions" style="margin-top:10px"><div hidden><button class="secondary" id="fileBtn">Enregistrer sous…</button><button class="secondary" id="exportBtn">Exporter mes données</button><button class="secondary" id="importBtn">Importer</button><input type="file" id="importFile" hidden><button type="button" id="pdfBtn" hidden></button></div></div>
     <h3>Devis enregistrés</h3>
     <div id="relanceBox" class="tariff-box" style="display:none;margin-bottom:12px"><b>À relancer</b><p class="hint" style="margin:4px 0 8px">Devis envoyés ou aperçu depuis 3 jours ou plus.</p><div id="relanceList"></div></div>
     <div class="searchrow"><input id="qSearch" type="search" placeholder="Rechercher (client, référence, projet)"><select id="qFilter"><option value="">Tous les devis</option><option value="encours">En cours</option><option value="relance">À relancer (3 jours et +)</option><option value="brouillon">Brouillon</option><option value="aperçu">Aperçu 3D montré</option><option value="envoyé">Devis envoyé</option><option value="accepté">Devis signé</option><option value="validé">Plan validé</option><option value="acompte">Acompte reçu</option><option value="livré">Plan technique livré</option><option value="soldé">Soldé</option><option value="refusé">Refusé</option></select></div>
@@ -284,7 +440,8 @@ details.opts{background:var(--card);border:1px solid var(--line);border-radius:1
 <div id="lock" class="lock" role="dialog" aria-label="Application verrouillée"><div class="lockbox"><img id="lockLogo" class="drawer-logo" alt="BatiPlan" style="align-self:center"><h2 style="margin:0">Application verrouillée</h2><p class="hint" id="lockMsg">Saisis ton code pour ouvrir BatiPlan.</p><input id="lockPin" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="Code"><button id="lockBtn">Déverrouiller</button><button id="lockForgot" class="secondary" type="button">Code oublié ?</button></div></div>
 <div id="scrim" class="scrim" hidden></div>
 <nav id="drawer" class="drawer" aria-label="Menu" aria-hidden="true"><img id="drawerLogo" class="drawer-logo" alt="BatiPlan">
-  <button data-act="new">Nouveau devis</button><button data-act="saved" id="savedBtn">Devis enregistrés ▾</button><div id="drawerList" hidden></div><button data-act="print">Imprimer / PDF</button><button data-act="pdf"><svg class="wi" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.2 8.6c0 3.9 2.3 6.2 6.2 6.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Envoyer le PDF par WhatsApp</button><button data-act="file">Enregistrer ce devis dans un dossier…</button><hr>
+  <button data-act="new">Nouveau devis</button><button data-act="saved" id="savedBtn">Devis enregistrés ▾</button><div id="drawerList" hidden></div><button data-act="demarche">Notre démarche de conception</button>
+  <button data-act="print">Imprimer / PDF le devis</button><button data-act="file">Enregistrer ce devis dans un dossier…</button><hr>
   <button data-act="tarifs">Réglages des tarifs</button><button data-act="sig">Ma signature…</button><button data-act="pin">Code de verrouillage…</button><button data-act="dark" id="darkBtn">Thème : automatique</button><hr><button data-act="export">Exporter mes données</button><button data-act="import">Importer des données</button></nav>
 <dialog id="sigDialog"><h3 style="margin-top:0">Ma signature</h3><p class="hint">Signe avec un stylo foncé sur une feuille blanche, puis photographie-la bien à plat, en pleine lumière. Le fond blanc est retiré automatiquement.</p>
 <input type="file" id="sigFile" accept="image/*" style="margin-top:10px"><div id="sigPreview" style="background:#fff;color:#667582;border:1px dashed #9aa9b8;border-radius:8px;min-height:80px;padding:8px;margin-top:12px;display:flex;align-items:center;justify-content:center"></div><p class="hint" id="sigMsg"></p>
@@ -411,7 +568,7 @@ const TARIFS_DEFAUT={base:35000,m2:700,min:150000,p2:125000,p3:300000,ext:30000,
 let TARIFS=JSON.parse(JSON.stringify(TARIFS_DEFAUT));
 function cleanTarifs(o){const r=JSON.parse(JSON.stringify(TARIFS_DEFAUT));if(!o||typeof o!=='object')return r;const ok=v=>typeof v==='number'&&isFinite(v)&&v>=0&&v<1e9;Object.keys(r).forEach(k=>{if(k!=='floors'&&ok(o[k]))r[k]=o[k]});if(Array.isArray(o.floors))r.floors=r.floors.map((d,i)=>ok(o.floors[i])?o.floors[i]:d);return r}
 function saveTarifs(){try{localStorage.setItem('batiplanTarifs',JSON.stringify(TARIFS))}catch(e){}}
-function syncTarifs(){tariffFloors.forEach((t,i)=>t.floor=TARIFS.floors[i]);const vo=[...$('preset').options].filter(o=>o.dataset.unit==='vue');if(vo[0])vo[0].dataset.price=TARIFS.ext;if(vo[1])vo[1].dataset.price=TARIFS.int;$('tariffHint').textContent=`Formule 2D : maximum entre le plancher de la tranche et (${money(TARIFS.base)} + ${money(TARIFS.m2)}/m²), puis coefficient de complexité, avec un minimum de ${money(TARIFS.min)} (Pack 1). Pack 2 : + ${money(TARIFS.p2)} ; Pack 3 : + ${money(TARIFS.p3)}. L’urgence est appliquée ensuite.`}
+function syncTarifs(){tariffFloors.forEach((t,i)=>t.floor=TARIFS.floors[i]);const vo=[...$('preset').options].filter(o=>o.dataset.unit==='vue');if(vo[0])vo[0].dataset.price=TARIFS.ext;if(vo[1])vo[1].dataset.price=TARIFS.int;$('tariffHint').textContent=`Formule 2D : maximum entre le plancher de la tranche et (${money(TARIFS.base)} + ${money(TARIFS.m2)}/m²), puis coefficient de complexité, Minimum conseillé Pack 1 : ${money(TARIFS.min)} (indicatif, n’aplatit plus le prix). Pack 2 : + ${money(TARIFS.p2)} ; Pack 3 : + ${money(TARIFS.p3)}. L’urgence est appliquée ensuite.`}
 const TSPEC=[['base','Forfait de base'],['m2','Prix par m²'],['min','Minimum Pack 1'],['p2','Supplément Pack 2'],['p3','Supplément Pack 3'],['ext','Vue extérieure supp.'],['int','Vue intérieure supp.']];
 function fillTarifUI(){document.querySelectorAll('#tarifGrid input').forEach(i=>{i.value=i.dataset.k?TARIFS[i.dataset.k]:TARIFS.floors[i.dataset.f]})}
 function buildTarifUI(){$('tarifGrid').innerHTML=TSPEC.map(([k,l])=>`<div class="field"><label>${l} (FCFA)</label><input type="number" min="0" step="500" data-k="${k}"></div>`).join('')+tariffFloors.map((t,i)=>`<div class="field"><label>Plancher ${t.label} (FCFA)</label><input type="number" min="0" step="1000" data-f="${i}"></div>`).join('');fillTarifUI()}
@@ -433,7 +590,9 @@ function calculateTariff(){
  const pack = val('pack');
  const packMinimum = TARIFS.min;
  const packSupplement = pack==='2d3d' ? TARIFS.p2 : pack==='complete' ? TARIFS.p3 : 0;
- const basePrice = Math.round(Math.max(base2d, packMinimum) + packSupplement);
+ // Prix selon surface (plancher de tranche ou formule) + supplément pack.
+ // Sans max(..., packMinimum) qui aplatissait 50 m² et 150 m² au même montant.
+ const basePrice = Math.round(base2d + packSupplement);
  const packName = pack==='2d3d' ? 'Pack 2 — Conception 2D + visualisation 3D' : pack==='complete' ? 'Pack 3 — Présentation architecturale complète' : 'Pack 1 — Conception 2D';
  const exteriorCount = Math.min(20, Math.max(0, Number(val('extraExterior'))||0));
  const interiorCount = Math.min(20, Math.max(0, Number(val('extraInterior'))||0));
@@ -443,7 +602,8 @@ function calculateTariff(){
  const urgencyPrice = Math.round(basePrice*urgency);
  const total = Math.round(basePrice + exteriorPrice + interiorPrice + urgencyPrice);
  lastTariff = {area, tranche, baseAndArea, complexity, base2d, pack, packName, packMinimum, packSupplement, basePrice, exteriorCount, interiorCount, exteriorPrice, interiorPrice, urgency, urgencyPrice, total};
- $('tariffResult').innerHTML = `<strong>Estimation : ${money(total)}</strong>\nSurface : ${area.toLocaleString('fr-FR')} m² (${tranche.label})\nBase forfait + surface : ${money(baseAndArea)} ; plancher : ${money(tranche.floor)}\nAprès complexité : ${money(Math.round(base2d))}\nMinimum Pack 1 : ${money(packMinimum)} ; supplément du pack : ${money(packSupplement)}\nVues extérieures supplémentaires : ${money(exteriorPrice)} ; vues intérieures : ${money(interiorPrice)}\nMajoration d’urgence : ${money(urgencyPrice)}\n<span style="color:#667582">Prix proposé à vérifier avant envoi. Fichiers sources et frais de déplacement non inclus.</span>`;
+ const underMin = Math.round(base2d) < packMinimum;
+ $('tariffResult').innerHTML = `<strong>Estimation : ${money(total)}</strong>\nSurface : ${area.toLocaleString('fr-FR')} m² (${tranche.label})\nBase forfait + surface : ${money(baseAndArea)} ; plancher : ${money(tranche.floor)}\nAprès complexité : ${money(Math.round(base2d))}\nSupplément du pack : ${money(packSupplement)}${underMin?'\n<span style="color:#b26a00">Sous le minimum conseillé Pack 1 ('+money(packMinimum)+') — à valider commercialement.</span>':''}\nVues extérieures supplémentaires : ${money(exteriorPrice)} ; vues intérieures : ${money(interiorPrice)}\nMajoration d’urgence : ${money(urgencyPrice)}\n<span style="color:#667582">Prix proposé à vérifier avant envoi. Fichiers sources et frais de déplacement non inclus.</span>`;
  return lastTariff;
 }
 function addCalculatedTariff(){
@@ -466,7 +626,7 @@ function save(){try{update();const d=getData();localStorage.setItem('batiplanQuo
 const SIGNED=['accepté','validé','acompte','livré','soldé'];
 function refreshDirty(){if(!ready)return;const d=JSON.stringify(getData())!==lastSaved,e=$('saveState');e.textContent=d?'● Non enregistré':'✔ Enregistré';e.className='ss '+(d?'dirty':'ok')}
 function filterQuotes(q){const t=($('qSearch').value||'').toLowerCase().trim(),f=$('qFilter').value,now=Date.now();return q.filter(x=>{const st=x.status||'brouillon';if(f==='encours'&&['soldé','refusé'].includes(st))return false;if(f==='relance'&&!(['aperçu','envoyé'].includes(st)&&now-Date.parse(x.updated||0)>=3*864e5))return false;if(f&&f!=='encours'&&f!=='relance'&&st!==f)return false;return !t||[x.ref,x.client,x.project].join(' ').toLowerCase().includes(t)})}
-function renderDash(q){const m=new Date().toISOString().slice(0,7);let cur=0,dep=0,sol=0,sig=0;q.forEach(x=>{const st=x.status||'brouillon';if(!['soldé','refusé'].includes(st))cur++;if(st==='validé'||st==='acompte')dep+=Math.max(0,(x.deposit||0)-(x.paid||0));if(st==='livré')sol+=Math.max(0,(x.total||0)-(x.paid||0));if(SIGNED.includes(st)&&String(x.signedAt||x.updated||'').slice(0,7)===m)sig+=x.total||0});$('dash').innerHTML=[['Devis en cours',String(cur)],['Acomptes à recevoir',money(dep)],['Soldes à recevoir',money(sol)],['Signés ce mois-ci',money(sig)]].map(([l,v])=>'<div class="card"><b>'+v+'</b><span>'+l+'</span></div>').join('')}
+function renderDash(q){/* retiré */}
 function showTab(t){document.querySelectorAll('.editor>.panel[data-tab]').forEach(p=>p.classList.toggle('on',p.dataset.tab===t));document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t));document.body.classList.toggle('tab-apercu',t==='apercu');if(t==='clients')refreshClients();window.scrollTo({top:0})}
 $('tabbar').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='menuBtn2')openMenu();else if(b.dataset.t)showTab(b.dataset.t)});
 window.addEventListener('resize',()=>{if(innerWidth>900&&document.body.classList.contains('tab-apercu'))showTab('client')});
@@ -584,7 +744,7 @@ drawer.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)ret
  if(a==='saved'){$('drawerList').hidden=!$('drawerList').hidden;renderList();return}
  if(a==='dark'){themePref={auto:'dark',dark:'light',light:'auto'}[themePref];try{localStorage.setItem('batiplanTheme',themePref)}catch(e){}applyTheme();return}
  if(qo){const x=getQuotes().find(q=>q.ref===qo);closeMenu();if(x){setData(x.data);$('status').textContent='Devis '+qo+' ouvert.';showTab('client')}return}
- if(!a)return;closeMenu();setTimeout(()=>{if(a==='tarifs'){const d=$('tarifDialog');d.showModal?d.showModal():d.setAttribute('open','')}if(a==='export')$('exportBtn').click();if(a==='import')$('importBtn').click();if(a==='new')$('newBtn').click();if(a==='print')$('printBtn').click();if(a==='file')$('fileBtn').click();if(a==='pdf')$('pdfBtn').click();if(a==='pin'){pinRefresh();['pinCur','pinNew','pinNew2'].forEach(k=>$(k).value='');$('pinMsg').textContent='';openDlg('pinDialog')}if(a==='sig'){showSigPreview();$('sigMsg').textContent='';const d=$('sigDialog');d.showModal?d.showModal():d.setAttribute('open','')}},150)});
+ if(!a)return;closeMenu();setTimeout(()=>{if(a==='tarifs'){const d=$('tarifDialog');d.showModal?d.showModal():d.setAttribute('open','')}if(a==='export')$('exportBtn').click();if(a==='import')$('importBtn').click();if(a==='new')$('newBtn').click();if(a==='demarche')openDemarcheDialog();if(a==='print')$('printBtn').click();if(a==='file')$('fileBtn').click();if(a==='pin'){pinRefresh();['pinCur','pinNew','pinNew2'].forEach(k=>$(k).value='');$('pinMsg').textContent='';openDlg('pinDialog')}if(a==='sig'){showSigPreview();$('sigMsg').textContent='';const d=$('sigDialog');d.showModal?d.showModal():d.setAttribute('open','')}},150)});
 let themePref='auto';const mq=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null;
 function applyTheme(){const dark=themePref==='dark'||(themePref==='auto'&&!!mq&&mq.matches);document.body.classList.toggle('dark',dark);const m=document.querySelector('meta[name=theme-color]');if(m)m.content=dark?'#0a1a2a':'#16324f';$('darkBtn').textContent='Thème : '+{auto:'automatique',dark:'sombre',light:'clair'}[themePref]}
 try{const t=localStorage.getItem('batiplanTheme');themePref=['auto','dark','light'].includes(t)?t:(localStorage.getItem('batiplanDark')==='1'?'dark':'auto')}catch(e){}
@@ -819,7 +979,7 @@ function renderPayMethods(){
 function applyPrintMode(){
   document.body.classList.toggle('print-compact', val('printMode')==='compact');
 }
-document.body.insertAdjacentHTML('beforeend','<style>@media print{body.print-compact .quote-paper{font-size:10pt}body.print-compact .preview table{font-size:8.5pt}body.print-compact .deposit{padding:6px 8px}}</style>');
+document.body.insertAdjacentHTML('beforeend','<style>@media print{body.print-compact .quote-paper{font-size:10.5pt}body.print-compact .preview table{font-size:9.5pt}body.print-compact .deposit{padding:6px 8px}}</style>');
 
 /* E-mail */
 function sendMail(){
@@ -849,7 +1009,117 @@ if($('mailBtn')) $('mailBtn').addEventListener('click', sendMail);
 })();
 setTimeout(()=>{ try{ ensureOpenCurrent(); renderQtabs(); }catch(e){} }, 100);
 
+
+/* ===== Notre démarche de conception ===== */
+const DEMARCHE_TEXT = `*NOTRE DÉMARCHE DE CONCEPTION*
+
+*1. Aperçu initial offert*
+Avant tout versement d’acompte, BatiPlan réalise et présente au client un premier aperçu 3D simplifié et sans frais, élaboré à partir de ses besoins exprimés et des informations disponibles sur le terrain.
+
+Cet aperçu permet au client de découvrir une première orientation architecturale et d’apprécier les grandes lignes du projet. Il demeure indicatif, ne constitue pas un dossier technique et ne confère aucun droit d’utilisation, de reproduction ou d’exploitation.
+
+*2. Validation et demandes d’ajustement*
+À la présentation de l’aperçu, le client peut :
+• Valider directement le concept proposé ;
+• Ou formuler jusqu’à deux séries de demandes de modifications mineures.
+
+Ces ajustements sont intégrés à la poursuite de la conception après acceptation du devis et versement de l’acompte de 50 %.
+
+*3. Poursuite de la conception*
+Après validation du concept et règlement de l’acompte, BatiPlan procède aux ajustements convenus, puis à l’élaboration des plans techniques et des autres livrables prévus dans le devis.
+
+Toute demande entraînant une modification substantielle du programme, de l’organisation générale ou du concept architectural initial fera l’objet d’une évaluation complémentaire et, le cas échéant, d’un devis supplémentaire soumis à l’accord du client avant exécution.`;
+
+function fillDemarcheHeader(){
+  const logo=document.querySelector('#paper .logo')||document.querySelector('.logo');
+  const dl=document.getElementById('demarcheLogo');
+  if(dl && logo && logo.src) dl.src=logo.src;
+  const bits=[(typeof val==='function'?val('company'):'')||'BatiPlan', typeof val==='function'?val('phone'):'', typeof val==='function'?val('email'):'', typeof val==='function'?val('address'):''].filter(Boolean);
+  const dc=document.getElementById('demarcheContact'); if(dc) dc.textContent=bits.join(' · ');
+  const df=document.getElementById('demarcheFoot'); if(df) df.textContent=((typeof val==='function'&&val('slogan'))||'Plan solide, projet réussi')+((typeof val==='function'&&val('legalid'))?' · '+val('legalid'):'');
+}
+function openDemarcheDialog(){
+  try{ fillDemarcheHeader(); }catch(e){}
+  const d=$('demarcheDialog');
+  if(!d){ $('status').textContent='Module démarche introuvable.'; return; }
+  try{ if(typeof d.showModal==='function') d.showModal(); else d.setAttribute('open',''); }
+  catch(e){ d.setAttribute('open',''); }
+}
+function closeDemarcheDialog(){
+  const d=$('demarcheDialog');
+  if(d.close) d.close(); else d.removeAttribute('open');
+}
+function demarcheWhatsApp(){
+  fillDemarcheHeader();
+  let phone=(val('clientPhone')||'').replace(/\D/g,'');
+  if(phone.startsWith('00')) phone=phone.slice(2);
+  if(phone.length===9) phone='221'+phone;
+  const intro='Bonjour'+(val('client')?' '+val('client').trim():'')+',\n\nVoici notre démarche de conception chez '+(val('company')||'BatiPlan')+' :\n\n';
+  const msg=encodeURIComponent(intro+DEMARCHE_TEXT+'\n\nCordialement,\n'+(val('company')||'BatiPlan')+(val('phone')?'\n'+val('phone'):''));
+  const url=(phone.length>=10&&phone.length<=15)?('https://wa.me/'+phone+'?text='+msg):('https://wa.me/?text='+msg);
+  closeDemarcheDialog();
+  try{
+    const a=document.createElement('a'); a.href=url; a.target='_blank'; a.rel='noopener'; a.style.display='none';
+    document.body.appendChild(a); a.click(); a.remove();
+  }catch(e){ window.location.href=url; }
+  if($('status')) $('status').textContent=phone?'Démarche ouverte dans WhatsApp ('+phone+').':'Démarche ouverte — choisissez le contact dans WhatsApp.';
+}
+function demarchePrint(){
+  try{ fillDemarcheHeader(); }catch(e){}
+  closeDemarcheDialog();
+  document.body.classList.add('printing-demarche');
+  document.body.classList.remove('printing-receipt');
+  const paper=$('demarchePaper');
+  if(paper){ paper.style.display='block'; }
+  setTimeout(function(){
+    window.print();
+    setTimeout(function(){
+      document.body.classList.remove('printing-demarche');
+      if(paper) paper.style.display='';
+    }, 500);
+  }, 200);
+}
+document.addEventListener('click', function(e){
+  const t=e.target.closest('button,a'); if(!t)return;
+  if(t.id==='demarcheWa'){ e.preventDefault(); demarcheWhatsApp(); }
+  if(t.id==='demarchePrint'){ e.preventDefault(); demarchePrint(); }
+  if(t.id==='demarcheClose'){ e.preventDefault(); closeDemarcheDialog(); }
+});
+
+
+
+
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
 </script>
+
+<dialog id="demarcheDialog" class="no-print">
+  <h2 style="margin-top:0;color:var(--navy)">Notre démarche de conception</h2>
+  <p class="hint">Présentez votre méthode de travail aux prospects avant l’acceptation du devis.</p>
+  <div class="actions" style="margin-top:14px">
+    <button type="button" class="wa" id="demarcheWa">Envoyer par WhatsApp</button>
+    <button type="button" id="demarchePrint">Imprimer / Exporter en PDF</button>
+    <button type="button" class="secondary" id="demarcheClose">Fermer</button>
+  </div>
+</dialog>
+<div id="demarchePaper" class="quote-paper demarche-doc">
+  <img class="logo" alt="BatiPlan" id="demarcheLogo">
+  <h1>NOTRE DÉMARCHE DE CONCEPTION</h1>
+  <p class="dm-sub" id="demarcheContact"></p>
+  <h2>1. Aperçu initial offert</h2>
+  <p>Avant tout versement d’acompte, BatiPlan réalise et présente au client un premier aperçu 3D simplifié et sans frais, élaboré à partir de ses besoins exprimés et des informations disponibles sur le terrain.</p>
+  <p>Cet aperçu permet au client de découvrir une première orientation architecturale et d’apprécier les grandes lignes du projet. Il demeure indicatif, ne constitue pas un dossier technique et ne confère aucun droit d’utilisation, de reproduction ou d’exploitation.</p>
+  <h2>2. Validation et demandes d’ajustement</h2>
+  <p>À la présentation de l’aperçu, le client peut :</p>
+  <ul>
+    <li>Valider directement le concept proposé ;</li>
+    <li>Ou formuler jusqu’à deux séries de demandes de modifications mineures.</li>
+  </ul>
+  <p>Ces ajustements sont intégrés à la poursuite de la conception après acceptation du devis et versement de l’acompte de 50&nbsp;%.</p>
+  <h2>3. Poursuite de la conception</h2>
+  <p>Après validation du concept et règlement de l’acompte, BatiPlan procède aux ajustements convenus, puis à l’élaboration des plans techniques et des autres livrables prévus dans le devis.</p>
+  <p>Toute demande entraînant une modification substantielle du programme, de l’organisation générale ou du concept architectural initial fera l’objet d’une évaluation complémentaire et, le cas échéant, d’un devis supplémentaire soumis à l’accord du client avant exécution.</p>
+  <div class="dm-foot" id="demarcheFoot"></div>
+</div>
+
 </body>
 </html>
