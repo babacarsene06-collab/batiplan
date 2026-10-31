@@ -75,49 +75,6 @@ body.dark
 body.dark 
 details.opts{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:10px}
 
-
-/* —— Interface plus dense (moins étirée) —— */
-header{padding:10px max(14px,calc((100vw - 1180px)/2))!important}
-.brand{font-size:18px!important}
-.brand small{font-size:11px}
-.logo{width:36px;height:36px}
-.tabbar{padding:0 max(8px,calc((100vw - 1180px)/2));gap:2px}
-.tabbar .tab{padding:8px 10px;font-size:13px}
-.tabbar button#menuBtn2{padding:8px 10px}
-main{padding:8px max(12px,calc((100vw - 1180px)/2)) 72px}
-.panel{padding:12px 14px;margin-bottom:10px;border-radius:10px}
-.panel h2{font-size:15px;margin:0 0 8px;font-weight:700}
-.panel h3{font-size:13px;margin:12px 0 6px}
-.panel .hint,.hint{font-size:11.5px;margin:4px 0 8px;line-height:1.35}
-.grid{gap:8px 10px}
-.grid.three{gap:8px 10px}
-.field{gap:3px}
-.field label{font-size:11px;margin:0;letter-spacing:.01em}
-.field input,.field select,.field textarea{padding:7px 9px;font-size:13px;border-radius:8px}
-.field textarea{min-height:64px}
-.actions{gap:6px;margin-top:8px}
-.actions button,button.addline{padding:8px 12px;font-size:13px}
-.tariff-box{padding:10px 12px;margin:8px 0;border-radius:10px}
-.tariff-box h3{margin:0 0 6px}
-.service-head{font-size:10px;padding:0 0 4px;gap:4px}
-.service-row{gap:4px;margin-bottom:4px}
-.service-row input,.service-row select.unit{padding:6px 7px;font-size:12.5px}
-.searchrow{gap:6px;margin:6px 0 8px}
-.qrow{padding:8px 10px;margin-bottom:6px;border-radius:8px}
-.banner{padding:8px 12px;font-size:12.5px}
-#bottomBar{padding:8px max(12px,calc((100vw - 1180px)/2))}
-#bottomBar button{padding:8px 12px;font-size:13px}
-.drawer{padding:14px 12px}
-.drawer button{padding:10px 12px;font-size:13.5px}
-details.opts{padding:8px 10px;margin-top:8px}
-.preview .quote-paper,.quote-paper{padding:16px 18px}
-.quote-top{margin-bottom:10px}
-.quote-top h2{font-size:20px}
-.totals{margin-top:8px}
-.deposit{margin-top:10px;padding:8px 10px}
-.smallprint{margin-top:8px;font-size:10px}
-.editor>.panel[data-tab]+.panel[data-tab]{/* keep */ }
-
 </style>
 </head>
 <body>
@@ -234,6 +191,7 @@ details.opts{padding:8px 10px;margin-top:8px}
   </div>
   <div class="panel" data-tab="suivi">
     <h2>Suivi et sauvegarde</h2>
+    <div class="dash" id="dash"></div>
     <p class="hint">Chaque enregistrement ajoute le devis à la liste ci-dessous, sur cet appareil. « Exporter mes données » crée un fichier à garder (WhatsApp, e-mail, Drive) pour tout récupérer sur un nouveau téléphone avec « Importer ».</p>
     <div class="grid"><div class="field"><label for="qstatus">Statut du devis</label><select id="qstatus"><option value="brouillon">brouillon</option><option value="aperçu">aperçu 3D montré</option><option value="envoyé">devis envoyé</option><option value="accepté">devis signé</option><option value="validé">plan validé</option><option value="acompte">acompte reçu</option><option value="livré">plan technique livré</option><option value="soldé">soldé</option><option value="refusé">refusé</option></select></div>
       <div class="field"><label for="useSig">Ma signature</label><select id="useSig"><option value="non">Sans ma signature</option><option value="oui">Avec ma signature</option></select></div>
@@ -508,7 +466,7 @@ function save(){try{update();const d=getData();localStorage.setItem('batiplanQuo
 const SIGNED=['accepté','validé','acompte','livré','soldé'];
 function refreshDirty(){if(!ready)return;const d=JSON.stringify(getData())!==lastSaved,e=$('saveState');e.textContent=d?'● Non enregistré':'✔ Enregistré';e.className='ss '+(d?'dirty':'ok')}
 function filterQuotes(q){const t=($('qSearch').value||'').toLowerCase().trim(),f=$('qFilter').value,now=Date.now();return q.filter(x=>{const st=x.status||'brouillon';if(f==='encours'&&['soldé','refusé'].includes(st))return false;if(f==='relance'&&!(['aperçu','envoyé'].includes(st)&&now-Date.parse(x.updated||0)>=3*864e5))return false;if(f&&f!=='encours'&&f!=='relance'&&st!==f)return false;return !t||[x.ref,x.client,x.project].join(' ').toLowerCase().includes(t)})}
-function renderDash(q){/* retiré */}
+function renderDash(q){const m=new Date().toISOString().slice(0,7);let cur=0,dep=0,sol=0,sig=0;q.forEach(x=>{const st=x.status||'brouillon';if(!['soldé','refusé'].includes(st))cur++;if(st==='validé'||st==='acompte')dep+=Math.max(0,(x.deposit||0)-(x.paid||0));if(st==='livré')sol+=Math.max(0,(x.total||0)-(x.paid||0));if(SIGNED.includes(st)&&String(x.signedAt||x.updated||'').slice(0,7)===m)sig+=x.total||0});$('dash').innerHTML=[['Devis en cours',String(cur)],['Acomptes à recevoir',money(dep)],['Soldes à recevoir',money(sol)],['Signés ce mois-ci',money(sig)]].map(([l,v])=>'<div class="card"><b>'+v+'</b><span>'+l+'</span></div>').join('')}
 function showTab(t){document.querySelectorAll('.editor>.panel[data-tab]').forEach(p=>p.classList.toggle('on',p.dataset.tab===t));document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t));document.body.classList.toggle('tab-apercu',t==='apercu');if(t==='clients')refreshClients();window.scrollTo({top:0})}
 $('tabbar').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='menuBtn2')openMenu();else if(b.dataset.t)showTab(b.dataset.t)});
 window.addEventListener('resize',()=>{if(innerWidth>900&&document.body.classList.contains('tab-apercu'))showTab('client')});
